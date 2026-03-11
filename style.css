@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container, .success-page {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.step {
+  width: 35px;
+  height: 35px;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.step.active {
+  background: #2575fc;
+  color: #fff;
+}
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #6a11cb;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.success-page h1 {
+  color: #2575fc;
+}
+
+#goHome {
+  background: #4CAF50;
+}
+
+#goHome:hover {
+  background: #45a049;
+}
+input:focus, select:focus {
+  outline: none;
+  border: 2px solid #2575fc;
+}
+
+button {
+  font-weight: bold;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.form-step {
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
