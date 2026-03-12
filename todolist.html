@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-do List</title>
+</head>
+<body>
+
+<h1>To-do list</h1>
+
+<input type="text" id="text">
+<button onclick="AddItems()">Click</button>
+
+<ul id="list"></ul>
+
+<script>
+function AddItems(){
+    let input = document.getElementById("text").value;
+
+    if(input === "") return;
+
+    let li = document.createElement("li");
+
+    li.innerHTML = input + ' <span style="color:red; cursor:pointer;">delete</span>';
+
+    let list = document.getElementById("list");
+    list.prepend(li);
+    li.querySelector("span").onclick = function(){  li.remove();
+    }
+    document.getElementById("text").value = "";
+}
+</script>
+
+</body>
+</html>
